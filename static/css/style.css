@@ -1,0 +1,87 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header styling */
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form container styling */
+form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 100%;
+    border-top: 10px solid #3498db;
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+/* Input field styling */
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Prediction result styling */
+h3 {
+    text-align: center;
+    color: #27ae60;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+/* Responsive grid layout for input fields */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-grid .full-width {
+    grid-column: span 2;
+}

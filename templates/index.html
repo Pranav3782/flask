@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Heart Disease Prediction</h2>
+    <form action="/predict" method="POST">
+        <div class="form-grid">
+            <div>
+                <label>Age:</label>
+                <input type="number"  value="63" name="age" required>
+            </div>
+            <div>
+                <label>Sex </label>
+                <input type="number" value="1" name="sex" required>
+            </div>
+            <div>
+                <label>Chest Pain Type </label>
+                <input type="number" value="3" name="cp" required>
+            </div>
+            <div>
+                <label>Resting Blood Pressure:</label>
+                <input type="number" value="145" name="trestbps" required>
+            </div>
+            <div>
+                <label>Cholesterol:</label>
+                <input type="number" value="233" name="chol" required>
+            </div>
+            <div>
+                <label>Fasting Blood Sugar </label>
+                <input type="number" value="1" name="fbs" required>
+            </div>
+            <div>
+                <label>Resting ECG </label>
+                <input type="number" value="0" name="restecg" required>
+            </div>
+            <div>
+                <label>Max Heart Rate Achieved:</label>
+                <input type="number" value="150" name="thalach" required>
+            </div>
+            <div>
+                <label>Exercise Induced Angina </label>
+                <input type="number" value="0" name="exang" required>
+            </div>
+            <div>
+                <label>ST Depression Induced by Exercise:</label>
+                <input type="number" value="2.3" step="0.1" name="oldpeak" required>
+            </div>
+            <div>
+                <label>Slope of Peak Exercise ST Segment </label>
+                <input type="number" value="0" name="slope" required>
+            </div>
+            <div>
+                <label>Number of Major Vessels Colored by Fluoroscopy </label>
+                <input type="number" value="0" name="ca" required>
+            </div>
+            <div class="full-width">
+                <label>Thal </label>
+                <input type="number" value="1" name="thal" required>
+            </div>
+        </div>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
